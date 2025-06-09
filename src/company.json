@@ -29,7 +29,9 @@
         { "key": "2020", "value": 1200000 },
         { "key": "2021", "value": 2000000 },
         { "key": "2022", "value": 2000000 },
-        { "key": "2023", "value": 2000000 }
+        { "key": "2023", "value": 2000000 },
+        { "key": "2024", "value": 3000000 },
+        { "key": "2025", "value": 4000000 }
       ]
     },
     "debts": {
@@ -38,20 +40,22 @@
       "color": "red",
       "editable": true,
       "data": [
-        { "key": "2010", "value": 500000 },
-        { "key": "2011", "value": 600000 },
+        { "key": "2010", "value": 0 },
+        { "key": "2011", "value": 0 },
         { "key": "2012", "value": 700000 },
         { "key": "2013", "value": 800000 },
         { "key": "2014", "value": 900000 },
-        { "key": "2015", "value": 1000000 },
-        { "key": "2016", "value": 1100000 },
-        { "key": "2017", "value": 1200000 },
-        { "key": "2018", "value": 1300000 },
-        { "key": "2019", "value": 1500000 },
-        { "key": "2020", "value": 12000 },
+        { "key": "2015", "value": 10000 },
+        { "key": "2016", "value": 11000 },
+        { "key": "2017", "value": 12000 },
+        { "key": "2018", "value": 13000 },
+        { "key": "2019", "value": 150000 },
+        { "key": "2020", "value": 1200000 },
         { "key": "2021", "value": 15000 },
         { "key": "2022", "value": 20000 },
-        { "key": "2023", "value": 10000 }
+        { "key": "2023", "value": 10000 },
+        { "key": "2024", "value": 1000 },
+        { "key": "2025", "value": 1000 }
       ]
     },
     "comments": {
@@ -72,8 +76,10 @@
         { "key": "2019", "value": 10 },
         { "key": "2020", "value": 100 },
         { "key": "2021", "value": 456 },
-        { "key": "2022", "value": 30 },
-        { "key": "2023", "value": 20 }
+        { "key": "2022", "value": 300 },
+        { "key": "2023", "value": 2000 },
+        { "key": "2024", "value": 4000 },
+        { "key": "2025", "value": 20000 }
       ]
     },
     "negativeComments": {
@@ -95,369 +101,45 @@
         { "key": "2020", "value": 1 },
         { "key": "2021", "value": 2 },
         { "key": "2022", "value": 3 },
-        { "key": "2023", "value": 4 }
+        { "key": "2023", "value": 4 },
+        { "key": "2024", "value": 50 },
+        { "key": "2025", "value": 60 }
       ]
     }
   },
   {
-    "name": "Inna Firma",
-    "industry": "Finanse",
-    "location": "Kraków",
-    "established": 2005,
-    "employees": 100,
-    "revenue": 3000000,
-    "profit": 500000,
-    "debt": 1000000,
-    "assets": 2000000,
-    "income": {
-      "id": "income2",
-      "name": "Przychód",
-      "color": "blue",
-      "editable": true,
-      "data": [
-        { "key": "2005", "value": 700000 },
-        { "key": "2010", "value": 800000 },
-        { "key": "2015", "value": 900000 },
-        { "key": "2016", "value": 1000000 },
-        { "key": "2017", "value": 1100000 },
-        { "key": "2018", "value": 1200000 },
-        { "key": "2019", "value": 1300000 },
-        { "key": "2020", "value": 800000 },
-        { "key": "2021", "value": 900000 },
-        { "key": "2022", "value": 1200000 },
-        { "key": "2023", "value": 700000 }
-      ]
-    },
-    "debts": {
-      "id": "debts2",
-      "name": "Długi",
-      "color": "red",
-      "editable": true,
-      "data": [
-        { "key": "2005", "value": 5000 },
-        { "key": "2006", "value": 5000 },
-        { "key": "2007", "value": 5000 },
-        { "key": "2008", "value": 5000 },
-        { "key": "2009", "value": 5000 },
-        { "key": "2010", "value": 6000 },
-        { "key": "2015", "value": 7000 },
-        { "key": "2016", "value": 8000 },
-        { "key": "2017", "value": 9000 },
-        { "key": "2018", "value": 10000 },
-        { "key": "2019", "value": 11000 },
-        { "key": "2020", "value": 8000 },
-        { "key": "2021", "value": 9000 },
-        { "key": "2022", "value": 12000 },
-        { "key": "2023", "value": 7000 }
-      ]
-    },
-    "comments": {
-      "id": "comments2",
-      "name": "Komentarze",
-      "color": "green",
-      "editable": true,
-      "data": [
-        { "key": "2020", "value": 50 },
-        { "key": "2021", "value": 100 },
-        { "key": "2022", "value": 150 },
-        { "key": "2023", "value": 80 }
-      ]
-    },
-    "negativeComments": {
-      "id": "negativeComments2",
-      "name": "Komentarze Negatywne",
-      "color": "red",
-      "editable": true,
-      "data": [
-        { "key": "2020", "value": 5 },
-        { "key": "2021", "value": 10 },
-        { "key": "2022", "value": 15 },
-        { "key": "2023", "value": 8 }
-      ]
-    }
-  },
-  {
-    "name": "Trzecia Firma",
-    "industry": "E-commerce",
-    "location": "Wrocław",
-    "established": 2018,
-    "employees": 50,
-    "revenue": 2000000,
-    "profit": 300000,
-    "debt": 500000,
-    "assets": 1000000,
-    "income": {
-      "id": "income3",
-      "name": "Przychód",
-      "color": "blue",
-      "editable": true,
-      "data": [
-        { "key": "2020", "value": 400000 },
-        { "key": "2021", "value": 500000 },
-        { "key": "2022", "value": 700000 },
-        { "key": "2023", "value": 400000 }
-      ]
-    },
-    "debts": {
-      "id": "debts3",
-      "name": "Długi",
-      "color": "red",
-      "editable": true,
-      "data": [
-        { "key": "2020", "value": 4000 },
-        { "key": "2021", "value": 5000 },
-        { "key": "2022", "value": 7000 },
-        { "key": "2023", "value": 4000 }
-      ]
-    },
-    "comments": {
-      "id": "comments3",
-      "name": "Komentarze",
-      "color": "green",
-      "editable": true,
-      "data": [
-        { "key": "2020", "value": 10 },
-        { "key": "2021", "value": 10 },
-        { "key": "2022", "value": 20 },
-        { "key": "2023", "value": 2 }
-      ]
-    },
-    "negativeComments": {
-      "id": "negativeComments3",
-      "name": "Komentarze Negatywne",
-      "color": "red",
-      "editable": true,
-      "data": [
-        { "key": "2020", "value": 2 },
-        { "key": "2021", "value": 3 },
-        { "key": "2022", "value": 11 },
-        { "key": "2023", "value": 212 }
-      ]
-    }
-  },
-  {
-    "name": "PKN Orlen",
-    "industry": "Energetyka i Paliwo",
-    "location": "Płock",
-    "established": 1999,
-    "employees": 20000,
-    "revenue": 73500000000,
-    "profit": 4324000000,
-    "debt": 20000000000,
-    "assets": 263203000000,
-    "income": {
-      "id": "income_orlen",
-      "name": "Przychód",
-      "color": "blue",
-      "editable": true,
-      "data": [
-        { "key": "2020", "value": 86600000000 },
-        { "key": "2021", "value": 131500000000 },
-        { "key": "2022", "value": 278500000000 },
-        { "key": "2023", "value": 372000000000 },
-        { "key": "2024", "value": 73500000000 },
-        { "key": "2025", "value": 73500000000 }
-      ]
-    },
-    "debts": {
-      "id": "debts_orlen",
-      "name": "Długi",
-      "color": "red",
-      "editable": true,
-      "data": [
-        { "key": "2020", "value": 15000000000 },
-        { "key": "2021", "value": 16000000000 },
-        { "key": "2022", "value": 18000000000 },
-        { "key": "2023", "value": 19000000000 },
-        { "key": "2024", "value": 20000000000 },
-        { "key": "2025", "value": 20000000000 }
-      ]
-    },
-    "comments": {
-      "id": "comments_orlen",
-      "name": "Komentarze",
-      "color": "green",
-      "editable": true,
-      "data": [
-        { "key": "2020", "value": 100 },
-        { "key": "2021", "value": 150 },
-        { "key": "2022", "value": 200 },
-        { "key": "2023", "value": 250 },
-        { "key": "2024", "value": 300 },
-        { "key": "2025", "value": 350 }
-      ]
-    },
-    "negativeComments": {
-      "id": "negativeComments_orlen",
-      "name": "Komentarze Negatywne",
-      "color": "red",
-      "editable": true,
-      "data": [
-        { "key": "2020", "value": 10 },
-        { "key": "2021", "value": 15 },
-        { "key": "2022", "value": 20 },
-        { "key": "2023", "value": 25 },
-        { "key": "2024", "value": 30 },
-        { "key": "2025", "value": 35 }
-      ]
-    }
-  },
-  {
-    "name": "PKO Bank Polski",
-    "industry": "Finanse",
+    "NIP": "1234567890",
+    "name": "Przykładowa Firma 2",
+    "industry": "Technologia",
     "location": "Warszawa",
-    "established": 1919,
-    "employees": 25000,
-    "revenue": 7576000000,
-    "profit": 2469000000,
-    "debt": 10000000000,
-    "assets": 400000000000,
-    "income": {
-      "id": "income_pko",
-      "name": "Przychód",
-      "color": "blue",
-      "editable": true,
-      "data": [
-        { "key": "2020", "value": 12000000000 },
-        { "key": "2021", "value": 13000000000 },
-        { "key": "2022", "value": 14000000000 },
-        { "key": "2023", "value": 15000000000 },
-        { "key": "2024", "value": 16000000000 },
-        { "key": "2025", "value": 7576000000 }
-      ]
-    },
-    "debts": {
-      "id": "debts_pko",
-      "name": "Długi",
-      "color": "red",
-      "editable": true,
-      "data": [
-        { "key": "2020", "value": 8000000000 },
-        { "key": "2021", "value": 8500000000 },
-        { "key": "2022", "value": 9000000000 },
-        { "key": "2023", "value": 9500000000 },
-        { "key": "2024", "value": 10000000000 },
-        { "key": "2025", "value": 10000000000 }
-      ]
-    },
-    "comments": {
-      "id": "comments_pko",
-      "name": "Komentarze",
-      "color": "green",
-      "editable": true,
-      "data": [
-        { "key": "2020", "value": 80 },
-        { "key": "2021", "value": 90 },
-        { "key": "2022", "value": 100 },
-        { "key": "2023", "value": 110 },
-        { "key": "2024", "value": 120 },
-        { "key": "2025", "value": 130 }
-      ]
-    },
-    "negativeComments": {
-      "id": "negativeComments_pko",
-      "name": "Komentarze Negatywne",
-      "color": "red",
-      "editable": true,
-      "data": [
-        { "key": "2020", "value": 5 },
-        { "key": "2021", "value": 6 },
-        { "key": "2022", "value": 7 },
-        { "key": "2023", "value": 8 },
-        { "key": "2024", "value": 9 },
-        { "key": "2025", "value": 10 }
-      ]
-    }
-  },
-  {
-    "name": "KGHM Polska Miedź",
-    "industry": "Górnictwo i Metalurgia",
-    "location": "Lubin",
-    "established": 1961,
-    "employees": 34000,
-    "revenue": 8942000000,
-    "profit": 330000000,
-    "debt": 5000000000,
-    "assets": 70000000000,
-    "income": {
-      "id": "income_kghm",
-      "name": "Przychód",
-      "color": "blue",
-      "editable": true,
-      "data": [
-        { "key": "2020", "value": 20000000000 },
-        { "key": "2021", "value": 22000000000 },
-        { "key": "2022", "value": 25000000000 },
-        { "key": "2023", "value": 28000000000 },
-        { "key": "2024", "value": 35300000000 },
-        { "key": "2025", "value": 8942000000 }
-      ]
-    },
-    "debts": {
-      "id": "debts_kghm",
-      "name": "Długi",
-      "color": "red",
-      "editable": true,
-      "data": [
-        { "key": "2020", "value": 4000000000 },
-        { "key": "2021", "value": 4500000000 },
-        { "key": "2022", "value": 4800000000 },
-        { "key": "2023", "value": 4900000000 },
-        { "key": "2024", "value": 5000000000 },
-        { "key": "2025", "value": 5000000000 }
-      ]
-    },
-    "comments": {
-      "id": "comments_kghm",
-      "name": "Komentarze",
-      "color": "green",
-      "editable": true,
-      "data": [
-        { "key": "2020", "value": 60 },
-        { "key": "2021", "value": 70 },
-        { "key": "2022", "value": 80 },
-        { "key": "2023", "value": 90 },
-        { "key": "2024", "value": 100 },
-        { "key": "2025", "value": 110 }
-      ]
-    },
-    "negativeComments": {
-      "id": "negativeComments_kghm",
-      "name": "Komentarze Negatywne",
-      "color": "red",
-      "editable": true,
-      "data": [
-        { "key": "2020", "value": 3 },
-        { "key": "2021", "value": 4 },
-        { "key": "2022", "value": 5 },
-        { "key": "2023", "value": 6 },
-        { "key": "2024", "value": 7 },
-        { "key": "2025", "value": 8 }
-      ]
-    }
-  },
-  {
-    "name": "Kaczmarski Group",
-    "industry": "Usługi finansowe i windykacyjne",
-    "location": "Wrocław",
-    "established": 1992,
-    "employees": 300,
-    "revenue": 320000000,
-    "profit": 40000000,
-    "debt": 50000000,
-    "assets": 100000000,
+    "established": 2010,
+    "employees": 150,
+    "revenue": 5000000,
+    "profit": 1000000,
+    "debt": 2000000,
+    "assets": 3000000,
     "income": {
       "id": "income",
       "name": "Przychód",
       "color": "blue",
       "editable": true,
       "data": [
-        { "key": "2000", "value": 10000000 },
-        { "key": "2005", "value": 20000000 },
-        { "key": "2010", "value": 40000000 },
-        { "key": "2015", "value": 80000000 },
-        { "key": "2020", "value": 160000000 },
-        { "key": "2025", "value": 320000000 }
+        { "key": "2010", "value": 1000000 },
+        { "key": "2011", "value": 1200000 },
+        { "key": "2012", "value": 1500000 },
+        { "key": "2013", "value": 1800000 },
+        { "key": "2014", "value": 2000000 },
+        { "key": "2015", "value": 2500000 },
+        { "key": "2016", "value": 3000000 },
+        { "key": "2017", "value": 3500000 },
+        { "key": "2018", "value": 4000000 },
+        { "key": "2019", "value": 5000000 },
+        { "key": "2020", "value": 1200000 },
+        { "key": "2021", "value": 2000000 },
+        { "key": "2022", "value": 2000000 },
+        { "key": "2023", "value": 2000000 },
+        { "key": "2024", "value": 3000000 },
+        { "key": "2025", "value": 4000000 }
       ]
     },
     "debts": {
@@ -466,12 +148,22 @@
       "color": "red",
       "editable": true,
       "data": [
-        { "key": "2000", "value": 5000000 },
-        { "key": "2005", "value": 10000000 },
-        { "key": "2010", "value": 20000000 },
-        { "key": "2015", "value": 30000000 },
-        { "key": "2020", "value": 40000000 },
-        { "key": "2025", "value": 50000000 }
+        { "key": "2010", "value": 500000 },
+        { "key": "2011", "value": 600000 },
+        { "key": "2012", "value": 700000 },
+        { "key": "2013", "value": 800000 },
+        { "key": "2014", "value": 900000 },
+        { "key": "2015", "value": 1000000 },
+        { "key": "2016", "value": 1100000 },
+        { "key": "2017", "value": 1200000 },
+        { "key": "2018", "value": 1300000 },
+        { "key": "2019", "value": 1500000 },
+        { "key": "2020", "value": 12000 },
+        { "key": "2021", "value": 15000 },
+        { "key": "2022", "value": 20000 },
+        { "key": "2023", "value": 10000 },
+        { "key": "2024", "value": 5000000 },
+        { "key": "2025", "value": 10000000 }
       ]
     },
     "comments": {
@@ -480,12 +172,22 @@
       "color": "green",
       "editable": true,
       "data": [
+        { "key": "2010", "value": 1 },
+        { "key": "2011", "value": 2 },
+        { "key": "2012", "value": 3 },
+        { "key": "2013", "value": 4 },
+        { "key": "2014", "value": 5 },
+        { "key": "2015", "value": 6 },
+        { "key": "2016", "value": 7 },
+        { "key": "2017", "value": 8 },
+        { "key": "2018", "value": 9 },
+        { "key": "2019", "value": 10 },
         { "key": "2020", "value": 100 },
-        { "key": "2021", "value": 150 },
-        { "key": "2022", "value": 200 },
-        { "key": "2023", "value": 250 },
-        { "key": "2024", "value": 300 },
-        { "key": "2025", "value": 350 }
+        { "key": "2021", "value": 456 },
+        { "key": "2022", "value": 30 },
+        { "key": "2023", "value": 20 },
+        { "key": "2024", "value": 1 },
+        { "key": "2025", "value": 1 }
       ]
     },
     "negativeComments": {
@@ -494,12 +196,22 @@
       "color": "red",
       "editable": true,
       "data": [
-        { "key": "2020", "value": 10 },
-        { "key": "2021", "value": 15 },
-        { "key": "2022", "value": 20 },
-        { "key": "2023", "value": 25 },
-        { "key": "2024", "value": 30 },
-        { "key": "2025", "value": 35 }
+        { "key": "2010", "value": 1 },
+        { "key": "2011", "value": 2 },
+        { "key": "2012", "value": 3 },
+        { "key": "2013", "value": 4 },
+        { "key": "2014", "value": 5 },
+        { "key": "2015", "value": 6 },
+        { "key": "2016", "value": 7 },
+        { "key": "2017", "value": 8 },
+        { "key": "2018", "value": 9 },
+        { "key": "2019", "value": 10 },
+        { "key": "2020", "value": 1 },
+        { "key": "2021", "value": 2 },
+        { "key": "2022", "value": 113 },
+        { "key": "2023", "value": 334 },
+        { "key": "2024", "value": 1222 },
+        { "key": "2025", "value": 2222 }
       ]
     }
   }

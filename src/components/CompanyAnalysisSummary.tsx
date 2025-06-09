@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import GenericChart from "./GenericChart";
 import { Button } from "./Button";
 
@@ -23,31 +23,26 @@ const CompanyAnalysisSummary = ({
 }: CompanyAnalysisSummaryProps) => {
   const [value, setValue] = React.useState<boolean>(false);
 
-  function setColor(
-    paymentDelayProbability: number
-  ): React.CSSProperties | undefined {
-    if (paymentDelayProbability < 0.2) {
-      return { color: "green" };
-    } else if (paymentDelayProbability < 0.5) {
-      return { color: "orange" };
-    } else {
-      return { color: "red" };
-    }
-  }
+  const lastRef = useRef(null);
 
+  useEffect(() => {
+    if (lastRef.current) {
+      lastRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [probability1k, probability10k, probability100k]);
   return (
     <div
       style={{ maxWidth: "800px", margin: "0 auto", fontFamily: "sans-serif" }}
     >
       {probability1k && probability10k && probability100k && (
-        <div style={{ marginTop: "1rem" }}>
-          <h3>1k</h3>
+        <div ref={lastRef} style={{ marginTop: "1rem" }}>
+          <h3>Prawdopodobienstwo spłaty faktury </h3>
           <GenericChart
             series={[
               {
                 id: "probability",
-                name: "1k",
-                color: "#ff5733",
+                name: "1k[PLN]",
+                color: "#94a3ab",
                 editable: false,
                 data: [
                   ...probability1k.map((d) => ({
@@ -58,8 +53,8 @@ const CompanyAnalysisSummary = ({
               },
               {
                 id: "probability",
-                name: "10k",
-                color: "#60ff16",
+                name: "10k[PLN]",
+                color: "#005061",
                 editable: false,
                 data: [
                   ...probability10k.map((d) => ({
@@ -70,8 +65,8 @@ const CompanyAnalysisSummary = ({
               },
               {
                 id: "probability",
-                name: "100k",
-                color: "#336dff",
+                name: "100k[PLN]",
+                color: "#3a102f",
                 editable: false,
                 data: [
                   ...probability100k.map((d) => ({
@@ -89,7 +84,6 @@ const CompanyAnalysisSummary = ({
           />
         </div>
       )}
-
 
       {
         // <GenericChart

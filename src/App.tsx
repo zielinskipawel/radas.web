@@ -20,12 +20,9 @@ interface ReponseData {
 const App = () => {
   const [companyData, setCompanyData] = useState(company[0]);
 
-  const [response, setResponse] = useState<ReponseData | null>(null);
   const [probability, setPobability] = useState<PobabilityData[] | null>(
     null
   );
-  const [paymentDelayProbability, setPaymentDelayProbability] =
-    useState<number>(0.1); // Default value if not provided
 
   const [loading, setLoading] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -54,39 +51,39 @@ const App = () => {
 
   const setDefaultState = () => {
     setCompanyData(company[0]);
-    setResponse(null);
+    setPobability(null);
     setLoading(false);
     setIsError(false);
   };
 
-  const fetchAI = async (prompt: string) => {
-    try {
-      const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token2}`, // ← tutaj wstaw swój klucz
-        },
-        body: JSON.stringify({
-          model: "deepseek/deepseek-r1:free",
-          messages: [{ role: "user", content: prompt }],
-        }),
-      });
+  // const fetchAI = async (prompt: string) => {
+  //   try {
+  //     const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //         Authorization: `Bearer ${token2}`, // ← tutaj wstaw swój klucz
+  //       },
+  //       body: JSON.stringify({
+  //         model: "deepseek/deepseek-r1:free",
+  //         messages: [{ role: "user", content: prompt }],
+  //       }),
+  //     });
 
-      const data = await res.json();
-      const aiMessage =
-        data.choices?.[0]?.message?.content || "Brak odpowiedzi.";
+  //     const data = await res.json();
+  //     const aiMessage =
+  //       data.choices?.[0]?.message?.content || "Brak odpowiedzi.";
 
-      const dataJSON = JSON.parse(
-        aiMessage.replace("```json", "").trim().replace("```", "")
-      );
-      console.log("Odpowiedź AI:", dataJSON);
-      setResponse(dataJSON);
-    } catch (err) {
-      setIsError(true);
-      console.error("Błąd podczas zapytania do API:", err);
-    }
-  };
+  //     const dataJSON = JSON.parse(
+  //       aiMessage.replace("```json", "").trim().replace("```", "")
+  //     );
+  //     console.log("Odpowiedź AI:", dataJSON);
+  //     setResponse(dataJSON);
+  //   } catch (err) {
+  //     setIsError(true);
+  //     console.error("Błąd podczas zapytania do API:", err);
+  //   }
+  // };
   const fetchService = async () => {
     try {
       const companyDataFetch = {
@@ -117,7 +114,7 @@ const App = () => {
           data: [...companyData.negativeComments.data],
         },
       };
-      const res = await fetch("http://172.20.10.5:7236/Analysis", {
+      const res = await fetch("http://172.20.10.6:7236/Analysis", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -165,7 +162,7 @@ const App = () => {
   };
 
   const handleSubmit = async () => {
-    setDefaultState();
+    // setDefaultState();
     setLoading(true);
     console.log("Wysyłam zapytanie do API z promptem:", prompt);
     // const res = await fetchAI(prompt);
@@ -187,6 +184,7 @@ const App = () => {
               );
               if (selectedCompany) {
                 setCompanyData(selectedCompany);
+                setPobability(null);
               }
             }}
           >
@@ -217,7 +215,7 @@ const App = () => {
               setCompanyData((prev) => ({ ...prev, ...data }));
             }}
             disabled={loading}
-            minYear={2000}
+            minYear={2010}
             maxYear={2025}
             minValue={0}
             // Dynamically calculate maxValue based on data
@@ -235,7 +233,7 @@ const App = () => {
             onChange={(data) => {
               setCompanyData((prev) => ({ ...prev, ...data }));
             }}
-            minYear={2000}
+            minYear={2010}
             maxYear={2025}
             minValue={0}
             maxValue={
