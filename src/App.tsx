@@ -1,5 +1,6 @@
 import { CSSProperties, useState } from "react";
 import GenericChart from "./components/GenericChart";
+import RiseLoader from "react-spinners/RiseLoader";
 
 import company from "./company.json";
 import CompanyAnalysisSummary from "./components/CompanyAnalysisSummary";
@@ -20,9 +21,7 @@ interface ReponseData {
 const App = () => {
   const [companyData, setCompanyData] = useState(company[0]);
 
-  const [probability, setPobability] = useState<PobabilityData[] | null>(
-    null
-  );
+  const [probability, setPobability] = useState<PobabilityData[] | null>(null);
 
   const [loading, setLoading] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -163,6 +162,7 @@ const App = () => {
 
   const handleSubmit = async () => {
     // setDefaultState();
+    setPobability(null);
     setLoading(true);
     console.log("Wysyłam zapytanie do API z promptem:", prompt);
     // const res = await fetchAI(prompt);
@@ -201,11 +201,6 @@ const App = () => {
             Branża: {companyData.industry} | Lokalizacja: {companyData.location}{" "}
             | Założona: {companyData.established} | Pracownicy:{" "}
             {companyData.employees}
-          </p>
-          <p className="text-gray-600">
-            Przychody: {companyData.revenue} PLN | Zysk: {companyData.profit}{" "}
-            PLN | Dług: {companyData.debt} PLN | Aktywa: {companyData.assets}{" "}
-            PLN
           </p>
         </div>
         <div style={{ display: "flex", gap: "1rem" }}>
@@ -258,6 +253,19 @@ const App = () => {
         {isError && (
           <div className="mt-4 text-red-600">
             Wystąpił błąd podczas analizy. Spróbuj ponownie później.
+          </div>
+        )}
+        {loading && (
+          <div
+            className="mt-6 bg-gray-100 p-12 rounded whitespace-pre-wrap center"
+            style={{
+              textAlign: "center",
+              justifyContent: "center",
+              margin: "auto",
+              padding: "200px",
+            }}
+          >
+            <RiseLoader color="#a3a3a3" />
           </div>
         )}
         {probability && !isError && (

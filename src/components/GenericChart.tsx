@@ -151,7 +151,7 @@ const GenericChart = ({
                     y={y}
                     radius={
                       hoveredPoint?.text ===
-                      `${s.name}: ${formatValue(p.value)}`
+                      `${formatValue(p.value)} (${s.name})`
                         ? 6
                         : 3
                     }
@@ -165,7 +165,7 @@ const GenericChart = ({
                       setHoveredPoint({
                         x,
                         y,
-                        text: `${s.name}: ${formatValue(p.value)}`,
+                        text: `${formatValue(p.value)} (${s.name})`,
                       })
                     }
                     onMouseLeave={() => setHoveredPoint(null)}
