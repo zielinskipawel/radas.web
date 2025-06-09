@@ -1,36 +1,38 @@
-import React, { CSSProperties } from 'react'
-import ScaleLoader from 'react-spinners/ScaleLoader'
+import React, { CSSProperties } from "react";
+import ScaleLoader from "react-spinners/ScaleLoader";
 
 const override: CSSProperties = {
-  display: 'block',
-  margin: '0 auto',
-  borderColor: 'red'
-}
+  display: "block",
+  margin: "0 auto",
+  borderColor: "red",
+};
 
 interface ButtonProps {
-  onClick: () => void
-  children: React.ReactNode
-  disabled?: boolean
-  loading?: boolean
-  style?: React.CSSProperties
+  onClick: () => void;
+  children: React.ReactNode;
+  disabled?: boolean;
+  loading?: boolean;
+  style?: React.CSSProperties;
+  className?: string;
 }
 export const Button: React.FC<ButtonProps> = ({
   onClick,
   children,
   disabled = false,
   loading = false,
-  style
+  style,
+  className = "",
 }) => {
   return (
     <button
-      className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 flex items-center justify-center w-full"
+      className={`bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 flex items-center justify-center ${className}`}
       onClick={onClick}
       disabled={loading}
     >
       <>
         {loading ? (
           <ScaleLoader
-            color={'#ffffff'}
+            color={"#ffffff"}
             loading={true}
             cssOverride={override}
             width={5}
@@ -45,5 +47,5 @@ export const Button: React.FC<ButtonProps> = ({
         {/* {!loading && children} */}
       </>
     </button>
-  )
-}
+  );
+};

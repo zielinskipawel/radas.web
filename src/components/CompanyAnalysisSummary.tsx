@@ -1,60 +1,113 @@
-import React from 'react'
-import GenericChart from './GenericChart'
+import React from "react";
+import GenericChart from "./GenericChart";
+import { Button } from "./Button";
 
-interface DataPoint {
-  year: number
-  value: number
+interface probabilityData {
+  year: number;
+  probability: number;
 }
-
 interface CompanyAnalysisSummaryProps {
-  scoringData: {
-    year: number
-    value: number
-  }[]
-  analysisText: string
-  minYear: number
-  maxYear: number
-  minScore?: number
-  maxScore?: number
+  minYear: number;
+  maxYear: number;
+  probability1k?: probabilityData[];
+  probability10k?: probabilityData[];
+  probability100k?: probabilityData[];
 }
 
 const CompanyAnalysisSummary = ({
-  scoringData,
-  analysisText,
   minYear,
   maxYear,
-  minScore = 0,
-  maxScore = 100
+  probability1k,
+  probability10k,
+  probability100k,
 }: CompanyAnalysisSummaryProps) => {
-  const series = [
-    {
-      id: 'scoring',
-      name: 'Scoring',
-      color: '#007acc',
-      editable: false,
-      data: scoringData
+  const [value, setValue] = React.useState<boolean>(false);
+
+  function setColor(
+    paymentDelayProbability: number
+  ): React.CSSProperties | undefined {
+    if (paymentDelayProbability < 0.2) {
+      return { color: "green" };
+    } else if (paymentDelayProbability < 0.5) {
+      return { color: "orange" };
+    } else {
+      return { color: "red" };
     }
-  ]
+  }
 
   return (
     <div
-      style={{ maxWidth: '800px', margin: '0 auto', fontFamily: 'sans-serif' }}
+      style={{ maxWidth: "800px", margin: "0 auto", fontFamily: "sans-serif" }}
     >
-      <h2 style={{ marginBottom: '1rem' }}>Analiza scoringu firmy</h2>
-      <GenericChart
-        series={series}
-        onChange={() => {}}
-        minYear={minYear}
-        maxYear={maxYear}
-        minValue={minScore}
-        maxValue={maxScore}
-      />
-      <div style={{ marginTop: '2rem', fontSize: '0.95rem', lineHeight: 1.6 }}>
-        <h3>Podsumowanie</h3>
-        <p>{analysisText}</p>
-      </div>
-    </div>
-  )
-}
+      {probability1k && probability10k && probability100k && (
+        <div style={{ marginTop: "1rem" }}>
+          <h3>1k</h3>
+          <GenericChart
+            series={[
+              {
+                id: "probability",
+                name: "1k",
+                color: "#ff5733",
+                editable: false,
+                data: [
+                  ...probability1k.map((d) => ({
+                    key: d.year,
+                    value: d.probability,
+                  })),
+                ],
+              },
+              {
+                id: "probability",
+                name: "10k",
+                color: "#60ff16",
+                editable: false,
+                data: [
+                  ...probability10k.map((d) => ({
+                    key: d.year,
+                    value: d.probability,
+                  })),
+                ],
+              },
+              {
+                id: "probability",
+                name: "100k",
+                color: "#336dff",
+                editable: false,
+                data: [
+                  ...probability100k.map((d) => ({
+                    key: d.year,
+                    value: d.probability,
+                  })),
+                ],
+              },
+            ]}
+            onChange={() => {}}
+            minYear={minYear}
+            maxYear={maxYear}
+            minValue={0}
+            maxValue={1}
+          />
+        </div>
+      )}
 
-export default CompanyAnalysisSummary
+
+      {
+        // <GenericChart
+        //   series={series}
+        //   onChange={() => {}}
+        //   minYear={minYear}
+        //   maxYear={maxYear}
+        //   minValue={minScore}
+        //   maxValue={maxScore}
+        // />
+      }
+
+      {/* <div style={{ marginTop: "2rem", fontSize: "0.95rem", lineHeight: 1.6 }}>
+        <h3>Podsumowanie</h3>
+        {<p>{analysisText}</p>}
+      </div> */}
+    </div>
+  );
+};
+
+export default CompanyAnalysisSummary;
